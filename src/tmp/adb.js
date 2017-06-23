@@ -68,8 +68,8 @@ function get_value_collection(){
 //
 
 
-const vobj = get_value_collection();
-module.exports.VObj = vobj;
+const objValueColl = get_value_collection();
+module.exports.VCObj = objValueColl;
 module.exports.get_value_collection = get_value_collection;
 //module.exports.get_one_value_rec = get_one_value_rec;
 

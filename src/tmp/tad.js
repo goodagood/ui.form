@@ -8,7 +8,7 @@ var db = require('./adb.js');
 
 var vrec = require('./vrec.js');
 
-var vobj = db.VObj;
+var vcobj = db.VCObj;
 
 var p = console.log;
 
@@ -19,15 +19,15 @@ var p = console.log;
  */
 
 function cfindone(){
-    vobj.getCollection(function(err, vcoll){
+    vcobj.getCollection(function(err, vcoll){
         vcoll.findOne({parentid: {'$exists':false}}, (err, one)=>{
             p(one);
             p(err);
 
-            p(Object.keys(vobj));
-            p(Object.keys(vobj.db));
+            p(Object.keys(vcobj));
+            p(Object.keys(vcobj.db));
 
-            vobj.close(function(err, closed){
+            vcobj.close(function(err, closed){
                 p(new Date());
                 p(closed, err);
             });
@@ -59,7 +59,7 @@ function cfindtop(){
                 p(sub);
 
 
-                vobj.close(function(err, closed){
+                vcobj.close(function(err, closed){
                     p();
                     p(new Date());
                     p(closed, err);

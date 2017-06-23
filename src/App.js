@@ -10,8 +10,6 @@ import ValueRec from './value.rec.js';
 
 class App extends Component {
 
-
-
     render() {
         return (
                 <div className="App">
@@ -20,7 +18,9 @@ class App extends Component {
                     <FetchTesting />
                     <ValueEditor />
                 */}
-                    <p> App.js testing 0604 0727, 1317, 0619 2041pm </p>
+                    <p> App.js testing 0604 0727, 1317, 0619 2041pm,
+                    0623 1638pm
+                    </p>
                     <ValueRec />
                 </div>
                );
